@@ -1,31 +1,32 @@
-export default class Leaderboard {
-  constructor(scoreList = []) {
-    this.scoreList = scoreList;
-  }
+import * as api from './API.js';
 
-  add(data) {
-    this.scoreList.push(data);
-    this.display(data);
-    this.populateStorage();
+const addToLeaderboard = (data) => {
+  const formtxt = document.querySelector('form > p');
+  if (data.score === '' || data.name === '') {
+    formtxt.innerHTML = 'Fill out all the empty fields';
+    return;
   }
+  api.setData(data.user, data.score).then((recieved) => {
+    formtxt.innerHTML = recieved.result;
+  });
+};
 
-  display(data) {
-    const scoreListSection = document.querySelector('.scores');
-    if (this) {
-      const div = document.createElement('div');
-      div.className = 'score-wrapper';
-      div.innerHTML = `<h3>${data.name}: </h3>
-                      <h3>${data.score}</h3>`;
-      scoreListSection.appendChild(div);
+const displayLeaderboard = () => {
+  const scoreListSection = document.querySelector('.scores');
+  scoreListSection.innerHTML = '';
+  api.getData().then((dataList) => {
+    if (!dataList) {
+      return;
     }
-  }
+    const arrangedList = dataList.result.sort((a, b) => b.score - a.score);
+    arrangedList.forEach((data) => {
+      const li = document.createElement('li');
+      li.className = 'score-wrapper';
+      li.innerHTML = `<p>${data.user}:</p>
+                    <p>${data.score}</p>`;
+      scoreListSection.appendChild(li);
+    });
+  });
+};
 
-  populateStorage() {
-    localStorage.setItem(
-      'Scores',
-      JSON.stringify({
-        scoreList: this.scoreList,
-      }),
-    );
-  }
-}
+export { addToLeaderboard, displayLeaderboard };
