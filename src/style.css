@@ -1,64 +1,69 @@
 body {
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 
 .wrap {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
 }
 
 h1 {
-    text-align: center;
-    margin: 2rem;
+  text-align: center;
+  margin: 2rem;
 }
 
 #recent-score {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 40%;
 }
 
 .recent-score-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .scores {
-    border: 1px solid #2a2a2a;
-    max-height: 55vh;
-    overflow: auto;
+  border: 1px solid #2a2a2a;
+  max-height: 55vh;
+  overflow: auto;
+}
+
+.score-wrapper {
+    display: inline-flex;
+    padding: 0 1rem
 }
 
 #add-score {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 .add-score-heading {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .add-score-input {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 input {
-    border: 1px solid #2a2a2a;
-    height: 1.5rem;
-    max-width: 400px;
-    padding-left: 1rem;
-    margin: 0.5rem 0;
+  border: 1px solid #2a2a2a;
+  height: 1.5rem;
+  max-width: 400px;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
 }
 
 #submit {
-    align-self: flex-end;
+  align-self: flex-end;
 }
