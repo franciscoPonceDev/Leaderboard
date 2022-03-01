@@ -1,18 +1,8 @@
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 const currentGameID = 'VLcv73AwdH0SUYBh0Daf';
 
-const newGame = async (gameName) => {
-  const connect = await fetch(baseURL, {
-    method: 'POST',
-    body: JSON.stringify({
-      name: gameName,
-    }),
-    headers: { 'Content-type': 'application/JSON' },
-  });
-  const receivedData = await connect.json();
-  const gameID = receivedData.result;
-  return gameID;
-};
+// If it's required to create a new game everytime the window loads, I will do it.
+// But if its not. I'll not waste more time in it
 
 const getData = async () => {
   const connect = await fetch(`${baseURL}/${currentGameID}/scores`);
@@ -30,4 +20,4 @@ const setData = async (userName, userScore) => {
   return receivedData;
 };
 
-export { getData, setData, newGame };
+export { getData, setData };

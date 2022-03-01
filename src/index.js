@@ -14,7 +14,6 @@ submitBtn.addEventListener('click', (e) => {
   setTimeout(() => {
     refreshBtn.click();
   }, 1500);
-  
 });
 
 refreshBtn.addEventListener('click', () => {
