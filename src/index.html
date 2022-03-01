@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <header>
+        <h1>Leaderboard App</h1>
+    </header>
+    <div class="wrap">
+        <section id="recent-score">
+            <div class="recent-score-heading">
+                <h2>Recent Scores</h2>
+                <button id="refresh" type="button">Refresh</button>
+            </div>
+            <div class="scores">
+                Name : 100
+            </div>
+        </section>
+        <section id="add-score">
+            <div class="add-score-heading">
+                <h2>Add Score</h2>
+            </div>
+            <form class="add-score-input">
+                <input type="text" id="name" name="name" placeholder="Type your name here" required>
+                <input type="number" id="score" name="score" placeholder="Type your score here" required>
+                <button type="submit" id="submit">Add Score</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
