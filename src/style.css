@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+#recent-score {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 40%;
+}
+
+.recent-score-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scores {
+    border: 1px solid #2a2a2a;
+    max-height: 55vh;
+    overflow: auto;
+}
+
+#add-score {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.add-score-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-score-input {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid #2a2a2a;
+    height: 1.5rem;
+    max-width: 400px;
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+}
+
+#submit {
+    align-self: flex-end;
+}
