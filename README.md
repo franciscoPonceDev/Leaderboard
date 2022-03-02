@@ -11,9 +11,9 @@
 - CSS
 - JavaScript
 
-## Live Demo (if available)
+## Live Demo
 
-To add later.
+https://franciscoponcedev.github.io/Leaderboard/
 
 
 ## Getting Started
