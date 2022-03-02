@@ -22,7 +22,7 @@ const displayLeaderboard = () => {
     arrangedList.forEach((data) => {
       const li = document.createElement('li');
       li.className = 'score-wrapper';
-      li.innerHTML = `<p>${data.user}:</p>
+      li.innerHTML = `<p class="text-y">${data.user}:</p>
                     <p>${data.score}</p>`;
       scoreListSection.appendChild(li);
     });
