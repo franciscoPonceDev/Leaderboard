@@ -7,29 +7,33 @@
     <title>Leaderboard</title>
 </head>
 <body>
-    <header>
-        <h1>Leaderboard App</h1>
-    </header>
-    <div class="wrap">
-        <section id="recent-score">
-            <div class="recent-score-heading">
-                <h2>Recent Scores</h2>
-                <button id="refresh" type="button">Refresh</button>
-            </div>
-            <ul class="scores">
-            </ul>
-        </section>
-        <section id="add-score">
-            <div class="add-score-heading">
-                <h2>Add Score</h2>
-            </div>
-            <form class="add-score-input">
-                <input required type="text" id="name" name="name" placeholder="Type your name here">
-                <input required type="number" id="score" name="score" placeholder="Type your score here">
-                <button type="submit" id="submit">Add Score</button>
-                <p></p>
-            </form>
-        </section>
+    <div class="container">
+        <header>
+            <h1 class="neonText">Arcade Leaderboard</h1>
+        </header>
+        <div class="wrap">
+            <section id="recent-score">
+                <div class="recent-score-heading">
+                    <h2>Recent Scores</h2>
+                    <button id="refresh" type="button">Refresh</button>
+                </div>
+                <ul class="scores">
+                </ul>
+            </section>
+            <section id="add-score">
+                <div class="add-score-heading">
+                    <h2>Add Score</h2>
+                </div>
+                <form class="add-score-input">
+                    <label for="name">NAME:</label>
+                    <input required type="text" id="name" name="name">
+                    <label for="score">SCORE:</label>
+                    <input required type="number" id="score" name="score" >
+                    <button type="submit" id="submit">Add Score</button>
+                    <p></p>
+                </form>
+            </section>
+        </div>
     </div>
 </body>
 </html>

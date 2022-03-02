@@ -1,8 +1,35 @@
+@font-face {
+  font-family: 'Arcade';
+  src:
+    url('./asset/ARCADE_I.TTF') format('truetype'),
+    url('./asset/ARCADE_N.TTF') format('truetype'),
+    url('./asset/ARCADE_R.TTF') format('truetype');
+}
+
 body {
-  margin: 0;
+  margin: 1.5rem;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: sans-serif;
+  font-family: 'Arcade', sans-serif;
+  background-color: black;
+  color: #fff;
+  max-height: 100vh;
+}
+
+.container {
+  box-shadow:
+    0 0 0.1vw  0.4vw #fff7f7,
+    0 0 0.4vw  0.6vw #e97272,
+    0 0   4vw  0.4vw #e50b0b,
+    inset 0 0 1.5vw  0.4vw #e50b0b,
+    inset 0 0 0.4vw  0.2vw #e97272,
+    inset 0 0 0.5vw  0.2vw #fff7f7;
+  border-radius: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .wrap {
@@ -11,9 +38,57 @@ body {
   gap: 5rem;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.neonText {
+  color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px red,
+    0 0 82px red,
+    0 0 92px red,
+    0 0 102px red,
+    0 0 151px red;
+}
+
 h1 {
+  width: fit-content;
   text-align: center;
-  margin: 2rem;
+  padding: 2rem;
+  font-size: 4.2rem;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px red,
+      0 0 80px red,
+      0 0 90px red,
+      0 0 100px red,
+      0 0 150px red;
+  }
+
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
 }
 
 #recent-score {
@@ -33,11 +108,28 @@ h1 {
   border: 1px solid #2a2a2a;
   max-height: 55vh;
   overflow: auto;
+  box-shadow: inset 0 0 5px grey;
+}
+
+.scores::-webkit-scrollbar {
+  width: 20px;
+}
+
+.scores::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+}
+
+.scores::-webkit-scrollbar-thumb {
+  background: #fff;
 }
 
 .score-wrapper {
-    display: inline-flex;
-    padding: 0 1rem
+  display: flex;
+  padding: 0 1rem;
+}
+
+.text-y {
+  color: yellow;
 }
 
 #add-score {
@@ -57,13 +149,34 @@ h1 {
 }
 
 input {
+  color: yellow;
   border: 1px solid #2a2a2a;
   height: 1.5rem;
   max-width: 400px;
   padding-left: 1rem;
   margin: 0.5rem 0;
+  background-color: transparent;
+  font-family: 'Arcade', sans-serif;
+  font-weight: 600;
+}
+
+label {
+  font-family: 'Arcade', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
 }
 
 #submit {
-  align-self: flex-end;
+  align-self: center;
+}
+
+button {
+  background-color: transparent;
+  color: yellow;
+  font-size: 1.2rem;
+  font-family: 'Arcade', sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+  border: #e50b0b solid 3px;
 }
