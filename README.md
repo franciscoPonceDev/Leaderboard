@@ -27,8 +27,8 @@ https://franciscoponcedev.github.io/Leaderboard/
 
 👤 **Francisco Ponce**
 
-- GitHub: @franciscoPonceDev
-- LinkedIn: LinkedIn
+- GitHub: [@franciscoPonceDev](https://github.com/franciscoPonceDev)  
+- LinkedIn: [Francisco Ponce](https://www.linkedin.com/in/dev-ponce/)
 
 ## 🤝 Contributing
 
